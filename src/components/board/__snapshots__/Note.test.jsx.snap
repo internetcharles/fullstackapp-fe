@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Note component renders note 1`] = `
+<DocumentFragment>
+  <div>
+    <h3>
+      Cheese
+    </h3>
+    <p>
+      Cheese
+    </p>
+  </div>
+</DocumentFragment>
+`;
