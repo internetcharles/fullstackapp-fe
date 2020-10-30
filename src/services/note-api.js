@@ -10,3 +10,17 @@ export const getNotes = () => {
       note: note.note
     })));
 };
+
+export const postNote = (title, note) => {
+
+  
+
+  return fetch(`${URL}`, { 
+    method: 'POST', 
+    body: JSON.stringify({ title, note }), 
+    headers: { 'Content-Type': 'application/json' } 
+  })
+    .then(res => res.json())
+    .then(res => console.log(res));
+};
+

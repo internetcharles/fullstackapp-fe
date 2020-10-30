@@ -1,6 +1,7 @@
 import React from 'react';
 import { Note } from './Note';
 import { useNotes } from '../../hooks/note';
+import { Form } from '../app/form/Form';
 
 const NoteList = () => {
   const { loading, notes } = useNotes();
@@ -14,9 +15,12 @@ const NoteList = () => {
   ));
 
   return (
-    <ul data-testid="notes">
-      {noteElements}
-    </ul>
+    <div>
+      <Form />
+      <ul data-testid="notes">
+        {noteElements}
+      </ul>
+    </div>
   );
 };
 
