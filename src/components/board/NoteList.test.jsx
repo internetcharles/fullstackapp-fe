@@ -2,6 +2,7 @@ import React from 'react';
 import { render, waitFor, screen } from '@testing-library/react';
 import NoteList from './NoteList';
 import { getNotes } from '../../services/note-api';
+import { MemoryRouter } from 'react-router-dom';
 
 jest.mock('../../services/note-api');
 
@@ -13,7 +14,9 @@ describe('NoteList component', () => {
         note: 'yo'
       }
     ]);
-    render(<NoteList />);
+    render(<MemoryRouter>
+      <NoteList />
+    </MemoryRouter>);
 
     screen.getByText('Loading...');
 

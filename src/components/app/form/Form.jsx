@@ -17,7 +17,6 @@ export const Form = () => {
 
   const handleNoteChange = ({ target }) => {
     setNote(target.value);
-    console.log(title, note);
   };
 
   return (
